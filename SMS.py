@@ -26,7 +26,7 @@ def menu():
 #Login or register
 
 def login():
-        O = CON.connect(host="localhost",user="root",password="123456",database="sms")
+        O = CON.connect(host="localhost",user="root",password="root",database="sms")
         c = O.cursor()
         B=input("Enter your username : ")
         C=int(input("Enter your 4-digit password :"))
@@ -106,7 +106,7 @@ def login():
 
 def register():
         global dic
-        O = CON.connect(host="localhost",user="root",password="123456",database="sms")
+        O = CON.connect(host="localhost",user="root",password="root",database="sms")
         c = O.cursor()
         B=input("Enter a username :")
         C=int(input("Enter your 4-digit password : "))
@@ -134,7 +134,7 @@ def register():
 #Inserting data
 
 def insert():
-    O = CON.connect(host="localhost",user="root",password="123456",database="sms")
+    O = CON.connect(host="localhost",user="root",password="root",database="sms")
     c = O.cursor()
     st=int(input("""Select the Table
 Enter 1 for Personal_Details
@@ -185,7 +185,7 @@ Your Choice(1/2)...? """))
 #Updating data
 
 def update():
-        O = CON.connect(host="localhost",user="root",password="123456",database="SMS")
+        O = CON.connect(host="localhost",user="root",password="root",database="SMS")
         c = O.cursor()
         st=int(input("""Select the Table
 Enter 1 for Personal_Details
@@ -294,7 +294,7 @@ Enter 6 for Designation''')
 #Deleting records
 def delete(n):
         if n==1:
-                O = CON.connect(host="localhost",user="root",password="123456",database="sms")
+                O = CON.connect(host="localhost",user="root",password="root",database="sms")
                 c = O.cursor()
                 ch="y"
                 while ch.lower()=="y":
@@ -303,7 +303,7 @@ def delete(n):
                             O.commit()
                             ch=input("Do you want to continue DELETION(y/n).....")
         elif n==2:
-                O = CON.connect(host="localhost",user="root",password="123456",database="sms")
+                O = CON.connect(host="localhost",user="root",password="root",database="sms")
                 c = O.cursor()
                 A=input("Enter username to be deleted : ")
                 c.execute('select * from Login')
@@ -322,7 +322,7 @@ def delete(n):
                         
 #Displaying records
 def display():
-        O = CON.connect(host="localhost",user="root",password="123456",database="sms")
+        O = CON.connect(host="localhost",user="root",password="root",database="sms")
         c=O.cursor()
         print("""SELECT THE TABLE
 Enter 1 for Personal_Details
@@ -429,7 +429,7 @@ def salary():
                 A=int(input("Enter your choice :"))
                 print()
                 if A==1:
-                        O = CON.connect(host="localhost",user="root",password="123456",database="sms")
+                        O = CON.connect(host="localhost",user="root",password="root",database="sms")
                         c = O.cursor()
                         print("""Enter 1 for display of all salaries
 Enter 2 if you have Employee code to be displayed""")
@@ -462,7 +462,7 @@ Enter 2 if you have Employee code to be displayed""")
                         
 
                 elif A==2:
-                        O = CON.connect(host="localhost",user="root",password="123456",database="sms")
+                        O = CON.connect(host="localhost",user="root",password="root",database="sms")
                         c = O.cursor()
                         print('''Enter 1 if you want to increase for a single Employee
 Enter 2 if you want to increase the salary department wise''')
@@ -555,7 +555,7 @@ print("😀 ⫘ ⫘ ⫘ ⫘ ⫘ ⫘ ⫘ ⫘ ⫘ ⫘ ⫘ ⫘ ⫘ ⫘ ⫘ ⫘ ⫘ 
 print()
 
 
-O = CON.connect(host="localhost",user="root",password="123456",database="sms")
+O = CON.connect(host="localhost",user="root",password="root",database="sms")
 c = O.cursor()
 print('''Enter 1 to LOGIN
 Enter 2 to REGISTER
